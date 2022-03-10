@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #d8e2dc;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  min-width: 300px;
+  position: relative;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  margin: 0;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  box-shadow: 0px 20px 40px #52616b;
+  opacity: 0.2;
+  z-index: -1;
+  transition: all 0.4s ease-in-out;
+}
+
+.container:hover.container::before {
+  box-shadow: 0px 40px 90px #52616b;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.accordion-title {
+  position: relative;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: #52616b;
+  cursor: pointer;
+  transition: padding-left 0.2s ease-in-out;
+}
+
+.accordion-title:hover {
+  padding-left: 25px;
+}
+
+.accordion-title::before,
+.accordion-title::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  border-radius: 50px;
+  bottom: 0;
+  left: 0;
+  transition: all 0.6s ease-in-out;
+}
+.accordion-title::before {
+  width: 100%;
+  background-color: #c9d6df;
+}
+
+.accordion-title::after {
+  background: linear-gradient(90deg, #52616b, #c9d6df);
+  width: 0;
+}
+
+.accordion-title:hover.accordion-title::after {
+  width: 100%;
+}
+
+.accordionTitleActive::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  border-radius: 50px;
+  transition: all 0.6s ease-in-out;
+  bottom: 0;
+  left: 0;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.accordionTitleActive:after {
+  background-image: linear-gradient(90deg, #52616b, #c9d6df);
+  width: 100%;
+}
+
+.icon {
+  float: right;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  /* margin-top: -3px; */
+  align-items: center;
+  justify-content: center;
+}
+
+.icon::before,
+.icon::after {
+  content: "";
+  position: absolute;
+  /* border-radius: 50px; */
+  background-color: #c9d6df;
+  transition: all 0.3s ease;
+}
+
+.icon::before {
+  width: 2px;
+  height: 20px;
+}
+
+.icon::after {
+  width: 20px;
+  height: 2px;
+}
+
+.accordion-title:hover .icon::before,
+.accordion-title:hover .icon::after {
+  background-color: #52616b;
+}
+
+.icon.anime.icon:before {
+  transform: rotate(90deg);
+}
+
+.accordion .item .text {
+  opacity: 0;
+  height: 0;
+  padding: 0 20px;
+  position: relative;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 0.01em;
+  transition: all 0.4s ease-out;
+  overflow: hidden;
+  background-color: #f0f5f9;
+}
+
+.accordion .item .text.show {
+  opacity: 1;
+  height: auto;
+  padding: 25px 20px;
+  position: relative;
+  z-index: 0;
+  border-radius: 0px 0px 3px 3px;
+}
