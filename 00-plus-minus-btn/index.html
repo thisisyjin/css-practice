@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가상요소 이용한 버튼</title>
+    <style>
+      .plus {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        background-color: #525252;
+      }
+
+      .plus:before,
+      .plus:after {
+        content: "";
+        position: absolute;
+        background: #fff;
+        border-radius: 3px;
+        transition: all 500ms ease-in-out;
+      }
+      .plus:before {
+        width: 16px;
+        height: 2px;
+      }
+      .plus:after {
+        width: 2px;
+        height: 16px;
+      }
+
+      .plus:hover.plus:after {
+        transform: rotate(90deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="plus"></div>
+  </body>
+</html>

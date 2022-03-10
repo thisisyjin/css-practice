@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  width: 100%;
+  height: 100vh;
+  background-color: #fafafa;
+}
+
+/* reset CSS */
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* style */
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 180px;
+  background-color: #505050;
+  color: #fff;
+  padding: 20px 30px;
+}
+
+.logo-title {
+  position: relative;
+  font-size: 60px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  font-weight: 900;
+  color: transparent;
+  transition: all 250ms ease-in-out;
+}
+
+.logo-title:hover {
+  color: #0066ff;
+}
+
+.logo-title::before {
+  content: "whatisthis? whatisthis? whatisthis?";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-left: 30px;
+  width: 8em;
+  font-size: 30px;
+  line-height: 1.666666667;
+  font-weight: 300;
+  letter-spacing: -0.05em;
+  color: #fff;
+}
+
+.menus-grp {
+  display: flex;
+}
+
+.icons-grp {
+  display: flex;
+}
+
+.menus-grp a,
+.icons-grp a {
+  display: inline-block;
+  padding: 50px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+  transition: all 200ms ease-in-out;
+}
+
+.menus-grp a:hover,
+.icons-grp a:hover {
+  transform: scale(1.2);
+}
+
+.icons-grp .gh-icon {
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(./assets/github.svg);
+  color: transparent;
+}
+
+.icons-grp .port-icon {
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(./assets/contact.svg);
+  color: transparent;
+  transition: all 300ms ease-in-out;
+}
+
+.icons-grp .gh-icon:hover,
+.icons-grp .port-icon:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Media */
