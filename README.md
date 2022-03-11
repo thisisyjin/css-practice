@@ -15,6 +15,7 @@ various **CSS practice** (self-prac-ex)
 - **<code>HTML</code> + <code>CSS</code>** only
 - **Media Query**
 - use flex ( + display: none)
+- use transform + transition
 
 ![example2](https://user-images.githubusercontent.com/89119982/157808107-91b8261c-66e9-4825-8ec8-23959bca7f07.gif)
 
@@ -22,6 +23,7 @@ various **CSS practice** (self-prac-ex)
 ## 03 - Tab Menu
 
 - **<code>JS</code> + <code>CSS</code>** only
+- reference : @rafaelavlucas
 - various CSS properties
 - CSS transition + **pseudo elements**
 
