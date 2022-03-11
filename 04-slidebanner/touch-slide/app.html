@@ -5,7 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Slide Banner</title>
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /* 드래그 방지 */
+      body {
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        user-select: none;
+      }
+
+      .outer {
+        border: 6px solid #525252;
+        width: 300px;
+        height: 200px;
+        margin: 0 auto;
+        overflow-x: hidden;
+      }
+
+      .inner-grp {
+        display: flex;
+        transition: all 0.3s ease-out;
+        height: 100%;
+      }
+
+      .inner {
+        padding: 0 16px;
+        color: #fff;
+        text-align: center;
+      }
+
+      .inner:nth-of-type(1) {
+        background-color: rgb(209, 0, 0);
+      }
+      .inner:nth-of-type(2) {
+        background-color: rgb(255, 248, 49);
+      }
+      .inner:nth-of-type(3) {
+        background-color: rgb(60, 0, 255);
+      }
+    </style>
   </head>
   <body>
     <div class="outer">
@@ -20,10 +63,6 @@
           <h2>Third</h2>
         </div>
       </div>
-    </div>
-    <div class="btn-grp">
-      <button class="button-left">⬅Left</button>
-      <button class="button-right">Right➡</button>
     </div>
     <script src="app.js"></script>
   </body>

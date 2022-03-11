@@ -1,0 +1,88 @@
+/* colors
+#fbf8cc
+#f1c0e8
+#cfbaf0
+#a3c4f3
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.slide {
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide li {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+.slide li:nth-child(1) {
+  background-color: #fbf8cc;
+}
+.slide li:nth-child(2) {
+  background-color: #f1c0e8;
+}
+.slide li:nth-child(3) {
+  background-color: #cfbaf0;
+}
+.slide li:nth-child(4) {
+  background-color: #a3c4f3;
+}
+
+.slide input {
+  display: none;
+}
+
+.slide .bullet {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+.slide .bullet label {
+  cursor: pointer;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #666;
+  font-size: 0;
+  background-color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+
+/* radio 체크시 - opacity 1로 */
+
+#pos1:checked ~ ul li:nth-child(1),
+#pos2:checked ~ ul li:nth-child(2),
+#pos3:checked ~ ul li:nth-child(3),
+#pos4:checked ~ ul li:nth-child(4) {
+  opacity: 1;
+}
+
+/* bullet 액티브 표시 */
+
+#pos1:checked ~ .bullet label:nth-child(1),
+#pos2:checked ~ .bullet label:nth-child(2),
+#pos3:checked ~ .bullet label:nth-child(3),
+#pos4:checked ~ .bullet label:nth-child(4) {
+  background-color: #666;
+}
