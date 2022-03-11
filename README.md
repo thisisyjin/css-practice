@@ -2,7 +2,7 @@
 various **CSS practice** (self-prac-ex)
 
 ## 01 - Accordion Menu
-- No jQuery! **Only vanila JS + CSS**
+- No jQuery! **Only <code>vanila JS</code> + <code>CSS</code>**
 - reference : @rafaelavlucas
 - plus, minus icon **with flex** (without img)
 - CSS transition + etc.
@@ -12,7 +12,7 @@ various **CSS practice** (self-prac-ex)
 
 ## 02 - Nav Bar
 
-- HTML + CSS only
+- **<code>HTML</code> + <code>CSS</code>** only
 - **Media Query**
 - use flex ( + display: none)
 
@@ -21,7 +21,7 @@ various **CSS practice** (self-prac-ex)
 
 ## 03 - Tab Menu
 
-- JS + CSS 
+- **<code>JS</code> + <code>CSS</code>** only
 - various CSS properties
 - CSS transition + **pseudo elements**
 
