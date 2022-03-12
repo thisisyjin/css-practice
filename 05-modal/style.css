@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #eaa;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.opener {
+  display: block;
+  text-align: center;
+  background-color: #fff;
+  width: 300px;
+  margin: 10px auto;
+  padding: 10px 30px;
+  border-radius: 30px;
+  transition: all 0.2s ease-in-out;
+}
+
+.opener:hover {
+  background-color: #666;
+  color: #fff;
+}
+
+.layer {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.layer .box {
+  position: relative;
+  padding: 20px 20px 60px;
+  margin: 20px;
+  width: 500px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.layer .box .close {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: #09f;
+  color: #fff;
+  text-align: center;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-size: 13px;
+  transition: all 0.2s ease-in-out;
+}
+
+.layer .box .close:hover {
+  transform: scale(1.1);
+}
+
+.layer:target {
+  display: flex;
+  animation: open 0.5s;
+}
+
+@keyframes open {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

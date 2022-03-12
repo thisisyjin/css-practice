@@ -21,7 +21,7 @@ li {
   position: relative;
 }
 
-.slide .outer {
+.slide ul {
   width: calc(100% * 4);
   display: flex;
   transition: all 1s ease-out;
@@ -72,19 +72,19 @@ li {
 
 /* radio 체크시 - 마진 적용 */
 
-#pos1:checked ~ .outer {
+#pos1:checked ~ ul {
   margin-left: 0;
 }
 
-#pos2:checked ~ .outer {
+#pos2:checked ~ ul {
   margin-left: -100%;
 }
 
-#pos3:checked ~ .outer {
+#pos3:checked ~ ul {
   margin-left: -200%;
 }
 
-#pos4:checked ~ .outer {
+#pos4:checked ~ ul {
   margin-left: -300%;
 }
 
