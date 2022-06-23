@@ -1,0 +1,107 @@
+@font-face {
+  src: url('https://assets.codepen.io/2479807/BasierCircleMono-Regular.otf');
+  font-family: 'Basier Circle Mono';
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Stoke:wght@300;400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Basier Circle Mono', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #222;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  padding: 16px 24px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  outline: none;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+img {
+  max-width: 100%;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+}
+
+.projects-scroll {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100vh;
+  width: 100%;
+  will-change: transform;
+  transition: 0.6s;
+
+  .project {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+
+    &__content {
+      padding: 5vw;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-bottom: 24px;
+      font-family: 'Stoke', serif;
+      font-weight: 300;
+    }
+
+    img {
+      position: relative;
+      width: 610px;
+      height: 60vh;
+      filter: url(#drop-shadow);
+    }
+
+    &:nth-child(1) {
+      background-color: #c7d1c9;
+    }
+
+    &:nth-child(2) {
+      background-color: #f2eae2;
+    }
+
+    &:nth-child(3) {
+      background-color: #dee0e3;
+    }
+
+    &:nth-child(4) {
+      background-color: #f4f5f6;
+    }
+  }
+}
+
+// svg {
+//   display: none;
+// }
