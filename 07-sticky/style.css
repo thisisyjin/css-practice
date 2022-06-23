@@ -1,0 +1,33 @@
+      body {
+        background: #f0f0f0;
+      }
+
+      .blobs {
+        filter: url('#goo');
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
+
+      .blob {
+        position: absolute;
+        background: crimson;
+        left: 140px;
+        top: 120px;
+        width: 110px;
+        height: 110px;
+        line-height: 100px;
+        text-align: center;
+        color: white;
+        font-size: 40px;
+        border-radius: 100%;
+        margin-top: -50px;
+        margin-left: -50px;
+      }
+
+      .s2 {
+        left: 260px;
+        background: royalblue;
+      }
